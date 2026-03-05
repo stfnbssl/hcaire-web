@@ -6,7 +6,7 @@ function Home() {
     <div style={{ textAlign: 'center' }}>
       <h1>🏠 Home Page</h1>
       <p>React Router funziona su Cloudflare Worker!</p>
-      <Link to="/about" style={{ color: 'white', fontSize: '1.2rem' }}>
+      <Link to="/about" style={{ color: 'white', fontSize: '1.2rem', marginTop: '1rem', display: 'inline-block' }}>
         Vai alla pagina About →
       </Link>
     </div>
@@ -18,7 +18,7 @@ function About() {
     <div style={{ textAlign: 'center' }}>
       <h1>ℹ️ About Page</h1>
       <p>Questa è la pagina About</p>
-      <Link to="/" style={{ color: 'white', fontSize: '1.2rem' }}>
+      <Link to="/" style={{ color: 'white', fontSize: '1.2rem', marginTop: '1rem', display: 'inline-block' }}>
         ← Torna alla Home
       </Link>
     </div>

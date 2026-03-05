@@ -1,24 +1,41 @@
+import { getAssetFromKV } from '@cloudflare/kv-asset-handler';
+
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     const url = new URL(request.url);
     
-    // Ottieni il file dall'asset bucket
-    let response = await env.ASSETS.fetch(request);
-    
-    // Se il file non esiste (404), servi index.html per SPA routing
-    if (response.status === 404 && !url.pathname.includes('.')) {
-      const indexUrl = new URL('/index.html', request.url);
-      response = await env.ASSETS.fetch(indexUrl);
-      
-      return new Response(response.body, {
-        status: 200,
-        headers: {
-          'Content-Type': 'text/html;charset=UTF-8',
-          'Cache-Control': 'no-cache'
+    try {
+      // Prova a servire il file richiesto
+      return await getAssetFromKV(
+        {
+          request,
+          waitUntil: ctx.waitUntil.bind(ctx),
+        },
+        {
+          ASSET_NAMESPACE: env.__STATIC_CONTENT,
+          ASSET_MANIFEST: JSON.parse(env.__STATIC_CONTENT_MANIFEST),
         }
-      });
+      );
+    } catch (e) {
+      // Se il file non esiste e non è una risorsa statica, servi index.html
+      if (e.status === 404 && !url.pathname.includes('.')) {
+        try {
+          return await getAssetFromKV(
+            {
+              request: new Request(`${url.origin}/index.html`, request),
+              waitUntil: ctx.waitUntil.bind(ctx),
+            },
+            {
+              ASSET_NAMESPACE: env.__STATIC_CONTENT,
+              ASSET_MANIFEST: JSON.parse(env.__STATIC_CONTENT_MANIFEST),
+            }
+          );
+        } catch (indexError) {
+          return new Response('Not Found', { status: 404 });
+        }
+      }
+      
+      return new Response(e.message || 'Internal Server Error', { status: e.status || 500 });
     }
-    
-    return response;
   }
 };
