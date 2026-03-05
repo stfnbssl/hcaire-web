@@ -1,41 +1,34 @@
-import { getAssetFromKV } from '@cloudflare/kv-asset-handler';
-
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
     
+    // Usa il binding ASSETS definito in wrangler.toml
+    if (!env.ASSETS) {
+      return new Response('ASSETS binding not configured', { status: 500 });
+    }
+    
     try {
       // Prova a servire il file richiesto
-      return await getAssetFromKV(
-        {
-          request,
-          waitUntil: ctx.waitUntil.bind(ctx),
-        },
-        {
-          ASSET_NAMESPACE: env.__STATIC_CONTENT,
-          ASSET_MANIFEST: JSON.parse(env.__STATIC_CONTENT_MANIFEST),
-        }
-      );
-    } catch (e) {
-      // Se il file non esiste e non è una risorsa statica, servi index.html
-      if (e.status === 404 && !url.pathname.includes('.')) {
-        try {
-          return await getAssetFromKV(
-            {
-              request: new Request(`${url.origin}/index.html`, request),
-              waitUntil: ctx.waitUntil.bind(ctx),
-            },
-            {
-              ASSET_NAMESPACE: env.__STATIC_CONTENT,
-              ASSET_MANIFEST: JSON.parse(env.__STATIC_CONTENT_MANIFEST),
-            }
-          );
-        } catch (indexError) {
-          return new Response('Not Found', { status: 404 });
-        }
+      let response = await env.ASSETS.fetch(request);
+      
+      // Se non trovato e non è un file statico, servi index.html
+      if (response.status === 404 && !url.pathname.includes('.')) {
+        const indexUrl = new URL('/index.html', url.origin);
+        response = await env.ASSETS.fetch(indexUrl);
+        
+        // Assicurati che il content-type sia corretto
+        const headers = new Headers(response.headers);
+        headers.set('Content-Type', 'text/html;charset=UTF-8');
+        
+        return new Response(response.body, {
+          status: 200,
+          headers: headers
+        });
       }
       
-      return new Response(e.message || 'Internal Server Error', { status: e.status || 500 });
+      return response;
+    } catch (error) {
+      return new Response('Error: ' + error.message, { status: 500 });
     }
   }
 };
