@@ -1,11 +1,6 @@
-name = "vite-react-router"
+name = "vite-react-worker"
+main = "dist/_worker.js/index.js"
 compatibility_date = "2024-01-01"
-pages_build_output_dir = "dist"
-```
 
-## 7. File `.gitignore`
-```
-node_modules
-dist
-.wrangler
-.dev.vars
+[site]
+bucket = "./dist/client"
