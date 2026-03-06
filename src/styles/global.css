@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #111827;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --surface: #f8fafc;
+  --accent: #334155;
+  --accent-soft: #e2e8f0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--foreground);
+}
+
+h2 {
+  @apply text-2xl font-semibold tracking-tight text-neutral-900 md:text-3xl;
+}
+
+h3 {
+  @apply text-xl font-semibold text-neutral-900;
+}
+
+p {
+  @apply text-neutral-700;
+}
+
+ul {
+  @apply list-disc pl-6;
+}
+
+li {
+  @apply leading-8;
+}
+
+.prose-hcaire {
+  max-width: 42rem;
+}
+
+.prose-hcaire h2 {
+  margin-top: 2.5rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.prose-hcaire h3 {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.prose-hcaire p {
+  margin-top: 1rem;
+  line-height: 1.8;
+  color: #374151;
+}
+
+.prose-hcaire ul {
+  margin-top: 1rem;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.prose-hcaire li {
+  margin-top: 0.4rem;
+  line-height: 1.8;
+  color: #374151;
+}
+
+/* colore dei pallini delle liste */
+.prose-hcaire li::marker {
+  color: #6b7280;
+}
+
+.prose-hcaire strong {
+  font-weight: 600;
+  color: #111827;
+}
+
+.prose-hcaire blockquote {
+  margin-top: 1.5rem;
+  padding-left: 1rem;
+  border-left: 3px solid #d1d5db;
+  color: #374151;
+  font-style: italic;
+}
+
+.prose-hcaire ul {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+  list-style: disc;
+}
+
+.prose-hcaire ol {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+  list-style: decimal;
+}
+
+
+.prose-hcaire ul li {
+  padding-left: 0.25rem;
+}
