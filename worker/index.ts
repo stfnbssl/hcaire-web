@@ -1,5 +1,15 @@
+// Definizione dei tipi per l'ambiente Cloudflare
+interface Env {
+  ASSETS: Fetcher;
+}
+
+// Definizione dell'handler del worker con tipi corretti
 export default {
-  async fetch(request, env, ctx) {
+  async fetch(
+    request: Request,
+    env: Env,
+    // ctx: ExecutionContext
+  ): Promise<Response> {
     const url = new URL(request.url);
     
     // Usa il binding ASSETS definito in wrangler.toml
@@ -9,7 +19,7 @@ export default {
     
     try {
       // Prova a servire il file richiesto
-      let response = await env.ASSETS.fetch(request);
+      let response: Response = await env.ASSETS.fetch(request);
       
       // Se non trovato e non è un file statico, servi index.html
       if (response.status === 404 && !url.pathname.includes('.')) {
@@ -28,7 +38,8 @@ export default {
       
       return response;
     } catch (error) {
-      return new Response('Error: ' + error.message, { status: 500 });
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      return new Response('Error: ' + errorMessage, { status: 500 });
     }
   }
-};
+} satisfies ExportedHandler<Env>;
