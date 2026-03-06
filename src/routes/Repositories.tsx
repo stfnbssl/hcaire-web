@@ -53,7 +53,7 @@ export default function Repositories() {
       />
 
       <section className="mx-auto max-w-6xl px-6 pb-8 md:px-8">
-        <div className="max-w-3xl">
+        <div className="max-w-5xl">
           <p className="text-lg leading-8 text-neutral-700">
             In HCAIRE i repository non sono soltanto spazi tecnici di
             archiviazione. Costituiscono una parte integrante del metodo del
@@ -79,7 +79,7 @@ export default function Repositories() {
               className="rounded-3xl border border-neutral-200 bg-white p-8 md:p-10"
             >
               <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
-                <div className="max-w-3xl">
+                <div className="max-w-5xl">
                   <p className="text-sm uppercase tracking-[0.16em] text-neutral-500">
                     {repo.type}
                   </p>

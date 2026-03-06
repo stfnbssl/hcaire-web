@@ -6,7 +6,7 @@ export const homeContent = {
     motto:
       "Modelli human-centered costruiti con il supporto dell’intelligenza artificiale",
     paragraphs: [
-      "HCAIRE è un ambiente di ricerca e sviluppo dedicato all’esplorazione di come l’intelligenza artificiale possa supportare la costruzione di modelli concettuali centrati sulla persona e la loro traduzione in strumenti operativi per contesti umani complessi.",
+      "HCAIRE è un ambiente di ricerca e sviluppo dedicato all’esplorazione del potenziale dell’intelligenza artificiale nella costruzione di modelli concettuali centrati sulla persona e la loro traduzione in strumenti operativi per contesti umani complessi.",
       "Il laboratorio riunisce professionisti di diverse discipline e utilizza l’intelligenza artificiale come infrastruttura cognitiva per integrare conoscenze, sviluppare architetture concettuali e progettare strumenti utilizzabili nella pratica.",
     ],
     primaryCta: {

@@ -29,8 +29,8 @@ export default function ChildDevelopmentProject() {
         description="Il primo progetto applicativo di HCAIRE, dedicato allo sviluppo del bambino e ai sistemi relazionali precoci come banco di prova di modelli human-centered e strumenti operativi supportati dall’intelligenza artificiale."
       />
 
-      <section className="mx-auto max-w-6xl px-6 py-8 md:px-8">
-        <div className="max-w-3xl">
+      <section className="mx-auto max-w-6xl px-10 py-8 md:px-8">
+        <div className="max-w-5xl">
           <p className="text-lg leading-8 text-neutral-700">
             Progetto Sviluppo Bambino è il primo ambito di applicazione del
             laboratorio HCAIRE. Il progetto esplora come modelli concettuali
@@ -50,7 +50,7 @@ export default function ChildDevelopmentProject() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-10 md:px-8">
+      <section className="mx-auto max-w-6xl px-10 py-10 md:px-8">
         <div className="grid gap-6 md:grid-cols-3">
           {focusAreas.map((area) => (
             <article
@@ -69,7 +69,7 @@ export default function ChildDevelopmentProject() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-10 md:px-8">
+      <section className="mx-auto max-w-6xl px-10 py-10 md:px-8">
         <div className="grid gap-8 rounded-3xl border border-neutral-200 bg-slate-50 p-8 md:grid-cols-[1.35fr_1fr] md:p-10">
           <div>
             <p className="text-sm uppercase tracking-[0.16em] text-neutral-500">
@@ -111,13 +111,13 @@ export default function ChildDevelopmentProject() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-10 md:px-8">
+      <section className="mx-auto max-w-6xl px-10 py-10 md:px-8">
         <div className="rounded-3xl border border-neutral-200 bg-white p-8 md:p-10">
           <h2 className="text-2xl font-semibold tracking-tight text-neutral-900">
             Relazione con HCAIRE e HCAI Models
           </h2>
 
-          <p className="mt-5 max-w-3xl leading-8 text-neutral-700">
+          <p className="mt-5 max-w-5xl leading-8 text-neutral-700">
             Progetto Sviluppo Bambino si colloca all’interno di HCAIRE come
             progetto applicativo. I modelli concettuali, le strutture di
             traducibilità interdisciplinare e la documentazione metodologica
@@ -125,7 +125,7 @@ export default function ChildDevelopmentProject() {
             primo campo di applicazione.
           </p>
 
-          <p className="mt-4 max-w-3xl leading-8 text-neutral-700">
+          <p className="mt-4 max-w-5xl leading-8 text-neutral-700">
             In questo senso il progetto è insieme un ambito di sviluppo
             concreto e un terreno di verifica del metodo generale del
             laboratorio.
@@ -149,20 +149,20 @@ export default function ChildDevelopmentProject() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-10 md:px-8">
+      <section className="mx-auto max-w-6xl px-10 py-10 md:px-8">
         <div className="rounded-3xl border border-neutral-200 bg-slate-50 p-8 md:p-10">
           <h2 className="text-2xl font-semibold tracking-tight text-neutral-900">
             Sviluppo progressivo del progetto
           </h2>
 
-          <p className="mt-5 max-w-3xl leading-8 text-neutral-700">
+          <p className="mt-5 max-w-5xl leading-8 text-neutral-700">
             La pagina evolverà progressivamente per documentare con maggiore
             dettaglio la struttura del progetto, gli assi concettuali, le forme
             di traduzione interdisciplinare e gli strumenti operativi via via
             sviluppati.
           </p>
 
-          <p className="mt-4 max-w-3xl leading-8 text-neutral-700">
+          <p className="mt-4 max-w-5xl leading-8 text-neutral-700">
             Nel tempo, Progetto Sviluppo Bambino costituirà anche una
             documentazione concreta di come l’intelligenza artificiale possa
             intervenire nella costruzione di modelli human-centered e nella loro

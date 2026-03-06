@@ -21,7 +21,7 @@ export default function Projects() {
             Progetto Sviluppo Bambino
           </h2>
 
-          <p className="mt-4 max-w-3xl leading-8 text-neutral-700">
+          <p className="mt-4 max-w-5xl leading-8 text-neutral-700">
             Un progetto dedicato allo sviluppo del bambino e ai sistemi
             relazionali precoci come dominio umano ad alta complessità, con
             l’obiettivo di costruire modelli coerenti e strumenti utilizzabili

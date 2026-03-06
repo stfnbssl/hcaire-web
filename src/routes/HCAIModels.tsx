@@ -30,7 +30,7 @@ export default function HCAIModels() {
       />
 
       <section className="mx-auto max-w-6xl px-6 py-8 md:px-8">
-        <div className="max-w-3xl">
+        <div className="max-w-5xl">
           <p className="text-lg leading-8 text-neutral-700">
             HCAI Models rappresenta il nucleo metodologico del laboratorio
             HCAIRE. Il programma esplora come l’intelligenza artificiale possa
@@ -112,7 +112,7 @@ export default function HCAIModels() {
             Progetti applicativi
           </h2>
 
-          <p className="mt-5 max-w-3xl leading-8 text-neutral-700">
+          <p className="mt-5 max-w-5xl leading-8 text-neutral-700">
             I modelli sviluppati nel programma HCAI Models vengono progressivamente
             applicati in progetti dedicati a specifici domini umani complessi.
             Il primo ambito di applicazione del laboratorio è lo sviluppo del

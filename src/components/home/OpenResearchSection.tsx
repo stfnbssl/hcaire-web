@@ -16,7 +16,7 @@ export function OpenResearchSection({
     >
       <div className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-20">
         <div className="grid gap-10 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] md:items-start">
-          <div className="max-w-3xl">
+          <div className="max-w-5xl">
             <h2
               id="open-research-section-title"
               className="text-2xl font-semibold tracking-tight text-neutral-900 md:text-3xl"

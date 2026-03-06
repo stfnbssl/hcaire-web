@@ -12,7 +12,7 @@ export function MainLayout({ children }: Props) {
 
       <Header />
 
-      <main className="flex-1">
+      <main className="flex-1 px-30">
         {children}
       </main>
 

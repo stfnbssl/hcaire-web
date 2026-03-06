@@ -21,7 +21,7 @@ export function StructureSection({
       className="border-b border-neutral-200 bg-neutral-50"
     >
       <div className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-20">
-        <div className="max-w-3xl">
+        <div className="max-w-5xl">
           <h2
             id="structure-section-title"
             className="text-2xl font-semibold tracking-tight text-neutral-900 md:text-3xl"
@@ -55,7 +55,7 @@ export function StructureSection({
                 </div>
               </div>
 
-              <p className="mt-4 max-w-3xl text-base leading-8 text-neutral-700">
+              <p className="mt-4 max-w-5xl text-base leading-8 text-neutral-700">
                 {item.description}
               </p>
             </article>

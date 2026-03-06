@@ -7,9 +7,9 @@ type Props = {
 
 export function ProseLayout({ title, children }: Props) {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-24 md:px-8">
+    <section className="mx-auto max-w-8xl px-6 py-12 md:px-8">
 
-      <div className="mx-auto max-w-3xl">
+      <div className="mx-auto max-w-5xl">
 
         <h1 className="text-4xl font-semibold tracking-tight text-neutral-900 md:text-5xl">
           {title}

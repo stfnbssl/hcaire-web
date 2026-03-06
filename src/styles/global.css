@@ -8,6 +8,8 @@
   --surface: #f8fafc;
   --accent: #334155;
   --accent-soft: #e2e8f0;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 }
 
 html {
@@ -17,11 +19,14 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-sans);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
 }
 
 a {
-  color: inherit;
   text-decoration: none;
 }
 
@@ -30,12 +35,19 @@ a {
   color: var(--foreground);
 }
 
+h1 {
+  font-weight: 500;
+  font-family: var(--font-serif);
+}
+
 h2 {
-  @apply text-2xl font-semibold tracking-tight text-neutral-900 md:text-3xl;
+  font-weight: 500;
+  font-family: var(--font-serif);
 }
 
 h3 {
-  @apply text-xl font-semibold text-neutral-900;
+  font-weight: 400;
+  font-family: var(--font-serif);
 }
 
 p {

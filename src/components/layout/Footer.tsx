@@ -2,10 +2,10 @@ import { Link } from "react-router";
 
 export function Footer() {
   return (
-    <footer className="border-t border-neutral-200 bg-slate-50">
+    <footer className="border-t border-neutral-200 bg-slate-200">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-3">
         <div className="md:col-span-2">
-          <p className="text-lg font-semibold text-neutral-900">HCAIRE</p>
+          <p className="text-lg font-semibold text-neutral-900 font-serif">HCAIRE</p>
           <p className="mt-3 max-w-xl text-sm leading-7 text-neutral-600">
             Human Centered Artificial Intelligence Research Environment dedicato
             allo studio di modelli human-centered, traduzione interdisciplinare
@@ -14,7 +14,7 @@ export function Footer() {
         </div>
 
         <div className="text-sm text-neutral-600">
-          <p className="font-medium text-neutral-900">Navigazione</p>
+          <p className="font-medium text-neutral-900 font-semibold font-serif">Navigazione</p>
           <div className="mt-3 flex flex-col gap-2">
             <Link to="/about" className="hover:text-neutral-900">About</Link>
             <Link to="/research" className="hover:text-neutral-900">Ricerca</Link>
@@ -30,7 +30,7 @@ export function Footer() {
       <div className="border-t border-neutral-200">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 text-sm text-neutral-500">
           <span>Reggio Emilia</span>
-          <span>© {new Date().getFullYear()} HCAIRE</span>
+          <span>© {new Date().getFullYear()} HCAIRE. All rights reserved.</span>
         </div>
       </div>
     </footer>

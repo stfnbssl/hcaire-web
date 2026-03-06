@@ -30,7 +30,7 @@ export default function Research() {
       />
 
       <section className="mx-auto max-w-6xl px-6 pb-8 md:px-8">
-        <div className="max-w-3xl">
+        <div className="max-w-5xl">
           <p className="text-lg leading-8 text-neutral-700">
             HCI Models rappresenta il nucleo metodologico del laboratorio.
             Qui vengono sviluppati i modelli concettuali, le strutture di
@@ -94,7 +94,7 @@ export default function Research() {
           <h2 className="text-2xl font-semibold tracking-tight text-neutral-900">
             Prossimo sviluppo
           </h2>
-          <p className="mt-5 max-w-3xl leading-8 text-neutral-700">
+          <p className="mt-5 max-w-5xl leading-8 text-neutral-700">
             Questa sezione evolverà nella pagina dedicata a HCI Models, dove
             saranno descritti in modo più dettagliato il repository pubblico, la
             struttura dei modelli human-centered e il ruolo metodologico

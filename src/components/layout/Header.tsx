@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router";
+import logo from "@/assets/logo.svg"
 
 const navItems = [
   { to: "/about", label: "HCAIRE" },
@@ -16,15 +17,20 @@ export function Header() {
     <header className="sticky top-0 z-40 border-b border-neutral-200 bg-white/85 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link to="/" className="group flex items-center gap-3">
-          <span className="inline-block h-3 w-3 rounded-full bg-slate-700 transition group-hover:scale-110" />
+          {/*<span className="inline-block h-3 w-3 rounded-full bg-slate-700 transition group-hover:scale-110" />*/}
           <div>
+            <img
+                src={logo}
+                alt="HCAIRE logo"
+                className="h-20 w-auto"
+            />            
+            {/*HCAIRE
             <div className="text-lg font-semibold tracking-tight text-neutral-900">
-              HCAIRE
             </div>
             <div className="hidden text-xs uppercase tracking-[0.16em] text-neutral-500 sm:block">
               Human Centered AI Research Environment
+            </div>*/}
             </div>
-          </div>
         </Link>
 
         <nav className="flex items-center gap-6 text-sm text-neutral-600">

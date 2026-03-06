@@ -6,8 +6,8 @@ type PageIntroProps = {
 
 export function PageIntro({ eyebrow, title, description }: PageIntroProps) {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-20 md:px-8 md:py-24">
-      <div className="max-w-3xl">
+    <section className="mx-auto max-w-6xl px-6 py-12 md:px-8 md:py-14">
+      <div className="max-w-5xl">
         {eyebrow ? (
           <p className="text-sm uppercase tracking-[0.18em] text-neutral-500">
             {eyebrow}

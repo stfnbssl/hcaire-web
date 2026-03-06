@@ -32,11 +32,11 @@ export function HeroSection({
 
         <div className="max-w-4xl">
 
-          <p className="text-sm uppercase tracking-[0.18em] text-neutral-500">
+          <p className="text-sm uppercase tracking-[0.18em] text-neutral-500 font-serif">
             {subtitle}
           </p>
 
-          <h1 className="mt-4 text-5xl font-semibold tracking-tight text-neutral-900 md:text-6xl">
+          <h1 className="mt-4 text-5xl font-semibold tracking-tight text-neutral-900 md:text-6xl font-serif">
             {title}
           </h1>
 
@@ -46,11 +46,11 @@ export function HeroSection({
             </p>
           )}
 
-          <p className="mt-10 text-xl leading-relaxed text-neutral-800 md:text-2xl">
+          <p className="mt-10 text-xl leading-relaxed text-neutral-800 md:text-2xl font-serif">
             {motto}
           </p>
 
-          <div className="mt-8 space-y-5 max-w-3xl">
+          <div className="mt-8 space-y-5 max-w-5xl">
             {paragraphs.map((p) => (
               <p
                 key={p}

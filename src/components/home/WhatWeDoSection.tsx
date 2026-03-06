@@ -20,7 +20,7 @@ export function WhatWeDoSection({
       className="border-b border-neutral-200 bg-white"
     >
       <div className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-20">
-        <div className="max-w-3xl">
+        <div className="max-w-5xl">
           <h2
             id="what-we-do-section-title"
             className="text-2xl font-semibold tracking-tight text-neutral-900 md:text-3xl"
