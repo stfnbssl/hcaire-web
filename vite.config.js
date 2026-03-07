@@ -6,7 +6,13 @@ import path from "path";
 import { fileURLToPath, URL } from "node:url";
 
 export default defineConfig({
-  plugins: [react(), tailwindcss(), mdx()],
+  plugins: [
+    react(), 
+    tailwindcss(), 
+    mdx({
+      include: /\.mdx$/,
+    }),
+  ],
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
@@ -17,4 +23,5 @@ export default defineConfig({
     emptyOutDir: true
   }
 })
+
 

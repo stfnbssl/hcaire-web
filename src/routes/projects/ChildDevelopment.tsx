@@ -167,7 +167,16 @@ export default function ChildDevelopmentProject() {
               to="/hcai-models/sviluppo-bambino"
               className="inline-flex items-center rounded-xl border border-slate-300 px-5 py-3 text-sm font-medium text-slate-800 transition hover:bg-slate-50"
             >
-              Visualizza il documento HCAI Model, project starter di Sviluppo Bambino.
+              Visualizza i documenti project starter di Sviluppo Bambino.
+            </Link>
+          </div>
+
+          <div className="mt-8">
+            <Link
+              to="/hcai-models/assi-strutturali"
+              className="inline-flex items-center rounded-xl border border-slate-300 px-5 py-3 text-sm font-medium text-slate-800 transition hover:bg-slate-50"
+            >
+              Visualizza i documenti sugli Assi Strutturali di Sviluppo Bambino.
             </Link>
           </div>
 

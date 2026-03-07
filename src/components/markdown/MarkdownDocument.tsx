@@ -3,6 +3,7 @@ import remarkGfm from "remark-gfm";
 
 type MarkdownDocumentProps = {
   content: string;
+  description?: string;
   title?: string;
 };
 

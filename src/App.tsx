@@ -10,6 +10,7 @@ import Repositories from "@/routes/Repositories";
 import HCAIModels from "@/routes/HCAIModels";
 import ChildDevelopmentProject from "@/routes/projects/ChildDevelopment";
 import ChildDevelopmentHCAIModel from "@/routes/hcai-models/ChildDevelopment";
+import AssiStrutturaliModel from "@/routes/hcai-models/AssiStrutturali";
 
 const App: FC = () => {
   const containerStyle: CSSProperties = { 
@@ -43,6 +44,10 @@ const App: FC = () => {
           <Route
             path="/hcai-models/sviluppo-bambino"
             element={<ChildDevelopmentHCAIModel />}
+          />
+          <Route
+            path="/hcai-models/assi-strutturali"
+            element={<AssiStrutturaliModel />}
           />
         </Routes>
       </div>
