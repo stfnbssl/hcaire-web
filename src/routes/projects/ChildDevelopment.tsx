@@ -85,7 +85,7 @@ export default function ChildDevelopmentProject() {
               esistenti dello sviluppo, ma di costruire un ambiente di
               integrazione tra contributi differenti e di verificare se
               l’intelligenza artificiale possa sostenere la produzione di
-              modelli più coerenti e strumenti migliori.
+              modelli coerenti e strumenti applicativi.
             </p>
 
             <p className="mt-4 leading-8 text-neutral-700">
@@ -161,6 +161,15 @@ export default function ChildDevelopmentProject() {
             di traduzione interdisciplinare e gli strumenti operativi via via
             sviluppati.
           </p>
+
+          <div className="mt-8">
+            <Link
+              to="/hcai-models/sviluppo-bambino"
+              className="inline-flex items-center rounded-xl border border-slate-300 px-5 py-3 text-sm font-medium text-slate-800 transition hover:bg-slate-50"
+            >
+              Visualizza il documento HCAI Model, project starter di Sviluppo Bambino.
+            </Link>
+          </div>
 
           <p className="mt-4 max-w-5xl leading-8 text-neutral-700">
             Nel tempo, Progetto Sviluppo Bambino costituirà anche una

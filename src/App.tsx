@@ -9,6 +9,7 @@ import Contact from "@/routes/Contact";
 import Repositories from "@/routes/Repositories";
 import HCAIModels from "@/routes/HCAIModels";
 import ChildDevelopmentProject from "@/routes/projects/ChildDevelopment";
+import ChildDevelopmentHCAIModel from "@/routes/hcai-models/ChildDevelopment";
 
 const App: FC = () => {
   const containerStyle: CSSProperties = { 
@@ -39,6 +40,10 @@ const App: FC = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/repositories" element={<Repositories />} />
           <Route path="/hcai-models" element={<HCAIModels />} />
+          <Route
+            path="/hcai-models/sviluppo-bambino"
+            element={<ChildDevelopmentHCAIModel />}
+          />
         </Routes>
       </div>
     </BrowserRouter>
